@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.views.settings.SettingsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/settings_title"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/nattmodus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:gravity="start"
+        android:checked="false"
+        android:text="@string/dark_mode"/>
+
+    <!--Knapp-->
+    <Button
+        android:id="@+id/bakgrunn"
+        android:layout_width="370dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:elevation="0dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="17sp"
+        android:text="@string/background"/>
+
+    <!--Knapp-->
+    <Button
+        android:id="@+id/tutorialButton"
+        android:layout_width="370dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:elevation="0dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="17sp"
+        android:text="@string/tutorial"/>
+
+    <!-- Linje -->
+    <TableRow
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primaryTextColor"/>
+
+
+    <Button
+        android:id="@+id/om"
+        android:layout_width="370dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:elevation="0dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="17sp"
+        android:text="@string/about" />
+
+    <Button
+        android:id="@+id/personvern"
+        android:layout_width="370dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:elevation="0dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="17sp"
+        android:text="@string/privacy" />
+
+
+</LinearLayout>
+

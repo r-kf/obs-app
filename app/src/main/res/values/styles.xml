@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Fab_Bottom_app_bar" parent="Theme.GR34_IN2000_V21">
+        <item name="colorPrimary">@color/secondaryColor</item>
+        <item name="colorPrimaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnPrimary">@color/secondaryTextColor</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- <item name="android:fontFamily">@font/inter</item> -->
+    </style>
+
+    <style name="Theme.InfoPageExpanded" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="android:textColor">@color/primaryTextColorD</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:shadowColor">#BE000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">6</item>
+    </style>
+
+    <style name="Theme.InfoPageCollapsed" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="android:textColor">@color/primaryTextColorD</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#7F000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="Theme.ToolbarTitleText" parent="@style/TextAppearance.MaterialComponents.Headline6">
+
+    </style>
+
+    <style name="Theme.InfoPageToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="Theme.VarselToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/black</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/spinner_background</item>
+    </style>
+
+    <style name="style_btn" parent="android:Theme.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Theme.Launcher" parent="Theme.GR34_IN2000_V21">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <item name ="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+</resources>

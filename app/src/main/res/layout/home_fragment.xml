@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.views.home.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/toolbar_menu"
+        app:title="@string/app_name" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_height="90sp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/farevarselOverskrift"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="7dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/farevarselOverskrift"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabIndicatorHeight="0dp"
+        app:tabMaxWidth="10dp" />
+
+    <TextView
+        android:id="@+id/farevarselOverskrift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingLeft="14dp"
+        android:text="@string/farevarsler"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/farevarselRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:translationZ="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/farevarselRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/farevarselRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/farevarselRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/farevarselOverskrift"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <TextView
+        android:id="@+id/noneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_none_text"
+        android:translationZ="1dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/farevarselRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/farevarselRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/farevarselRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/farevarselOverskrift"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/farevarselRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="70dp"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farevarselOverskrift"
+        tools:listitem="@layout/home_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

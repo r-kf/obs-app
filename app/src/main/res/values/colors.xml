@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mapToolbarColor">#80FAFAFA</color>
+    <color name="primaryColor">#fafafa</color>
+    <color name="primaryLightColor">#ffffff</color>
+    <color name="primaryDarkColor">#c7c7c7</color>
+    <color name="secondaryColor">#0010ba</color>
+    <color name="secondaryLightColor">#64c1ff</color>
+    <color name="secondaryDarkColor">#0064b7</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <!-- DARK MODE -->
+    <color name="mapToolbarColorD">#80212121</color>
+    <color name="primaryColorD">#212121</color>
+    <color name="primaryLightColorD">#484848</color>
+    <color name="primaryDarkColorD">#000000</color>
+    <color name="secondaryColorD">#2962ff</color>
+    <color name="secondaryLightColorD">#768fff</color>
+    <color name="secondaryDarkColorD">#0039cb</color>
+    <color name="primaryTextColorD">#ffffff</color>
+    <color name="secondaryTextColorD">#ffffff</color>
+
+    <color name="grey">#a0a0a0</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="varsel_toolbar_bg">#FFEB3B</color>
+</resources>

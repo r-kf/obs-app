@@ -1,0 +1,88 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 4,
+    "identityHash": "c48332b1e10b4f3cf9b7834899bff3c4",
+    "entities": [
+      {
+        "tableName": "county",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`avgrensningsboks` TEXT, `fylkesnavn` TEXT, `fylkesnummer` TEXT, `gyldigeNavn` TEXT NOT NULL, `kommunenavn` TEXT NOT NULL, `kommunenavnNorsk` TEXT, `kommunenummer` TEXT, `punktIOmrade` TEXT NOT NULL, `samiskForvaltningsomrade` INTEGER, `isFavorite` INTEGER NOT NULL, PRIMARY KEY(`kommunenavn`))",
+        "fields": [
+          {
+            "fieldPath": "avgrensningsboks",
+            "columnName": "avgrensningsboks",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fylkesnavn",
+            "columnName": "fylkesnavn",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fylkesnummer",
+            "columnName": "fylkesnummer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "gyldigeNavn",
+            "columnName": "gyldigeNavn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kommunenavn",
+            "columnName": "kommunenavn",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kommunenavnNorsk",
+            "columnName": "kommunenavnNorsk",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "kommunenummer",
+            "columnName": "kommunenummer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "punktIOmrade",
+            "columnName": "punktIOmrade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "samiskForvaltningsomrade",
+            "columnName": "samiskForvaltningsomrade",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isFavorite",
+            "columnName": "isFavorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "kommunenavn"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c48332b1e10b4f3cf9b7834899bff3c4')"
+    ]
+  }
+}

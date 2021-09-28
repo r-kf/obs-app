@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.gr34_in2000_v21.ui.views.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_navigation_home_to_farevarsel"
+            app:destination="@id/farevarsel" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.gr34_in2000_v21.ui.views.news.NewsFragment"
+        android:label="@string/news"
+        tools:layout="@layout/news_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.gr34_in2000_v21.ui.views.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/navigation_info"
+        android:name="com.example.gr34_in2000_v21.ui.views.info.InfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/info_fragment">
+        <action
+            android:id="@+id/action_infoList_to_infoPage"
+            app:destination="@id/infoPage" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoPage"
+        android:name="com.example.gr34_in2000_v21.ui.views.info.page.InfoPage"
+        android:label="fragment_info_page"
+        tools:layout="@layout/fragment_info_page">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="icon"
+            app:argType="string" />
+        <argument
+            android:name="content"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.gr34_in2000_v21.ui.views.search.SearchFragment"
+        android:label="Kart"
+        tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/farevarsel"
+        android:name="com.example.gr34_in2000_v21.ui.views.home.page.Farevarsel"
+        android:label="fragment_farevarsel"
+        tools:layout="@layout/fragment_farevarsel">
+        <argument
+            android:name="guid"
+            app:argType="string" />
+    </fragment>
+</navigation>

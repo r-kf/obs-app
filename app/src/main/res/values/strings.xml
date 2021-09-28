@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Obs!</string>
+    <string name="api_error">API feil</string>
+    <string name="search_button">Search button</string>
+    <string name="tutorial">Velkomstsider</string>
+    <string name="home">Hjem</string>
+    <string name="news">Nyheter</string>
+    <string name="settings">Innstillinger</string>
+    <string name="info">Info</string>
+    <string name="map">Kart</string>
+    <string name="farevarsler">Farevarsler</string>
+    <string name="info_title">Hjelp og informasjon</string>
+    <string name="settings_title">Innstillinger</string>
+    <string name="dark_mode">Nattmodus</string>
+    <string name="background">Bakgrunnsbilde</string>
+    <string name="about">Om appen</string>
+    <string name="privacy">Personvern</string>
+    <string name="home_none_text">Ingen farevarsler for i dag!</string>
+    <string name="news_title">Nyheter</string>
+    <string name="descriptive_image">Deskriptivt bilde</string>
+    <string name="om_appen">
+        Denne appen ble utviklet av fem studenter ved Universitetet i Oslo i sammenheng med
+        et prosjekt i emnet IN2000 - Software Engingeering med prosjektarbeid.
+
+        Appen skulle utvikles basert på data fra Meteorologisk Institutt. Det ble gitt ulike oppgaver
+        til prosjektarbeidet ut i fra dette. En av oppgavene hadde fokus på farevarsler, og skulle da
+        bruke et API fra Meteorologisk Institutt kalt Metalerts, som da ble starten på Obs!.
+
+        Appen henter informasjon om farevarsler fra MetAlerts, og i tillegg informasjon om kommuner
+        og deres koordinater fra API-er fra Geonorge.
+
+        For mer informasjon om MetAlerts, se: https://docs.api.met.no/doc/GettingStarted
+        For mer informasjon om Geonorge, se: https://ws.geonorge.no/kommuneinfo/v1/#/
+    </string>
+    <string name="personvern">
+        Infomasjon om posisjon dersom du har godtatt å dele dette og/eller favorittsteder lagres
+        lokalt på din telefon og ikke av oss i Obs!, ellers lagres ikke noe annen informasjon lokalt.
+        Derimot lagrer Meteorologisk Institutt din IP-adresse i deres logger i tillegg til andre
+        mulig geografiske koordinater, noe Obs! ikke har kontroll over eller tilgang til.
+
+        For mer informasjon om dette, se: https://docs.api.met.no/doc/TermsOfService
+    </string>
+
+    <string name="def_theme">Theme1</string>
+    <string name="theme_summary">Appearance</string>
+    <string name="theme_dialog_title">Theme</string>
+
+    <string-array name="themes">
+        <item>Theme1</item>
+        <item>Theme2</item>
+    </string-array>
+</resources>

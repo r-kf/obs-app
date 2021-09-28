@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gr34_in2000_v21">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/obs_app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/obs_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Fab_Bottom_app_bar">
+        <activity android:name=".ui.StartAnimation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.intro.WelcomeActivity"
+            android:label="Welcome Activity" /> <!-- android:theme="@style/Theme.GR34_IN2000_V21"> -->
+
+        <!-- API-key for Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyChlGkibCzkb6bJFz3qss893MDyOaYLgiQ" />
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/Theme.Launcher">
+
+            <!-- android:theme="@style/Theme.AppCompat.Launcher"> -->
+        </activity>
+    </application>
+
+</manifest>

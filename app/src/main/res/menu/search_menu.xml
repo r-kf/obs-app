@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/favoriteButton"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="JA"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/favoriteNotButton"
+        android:enabled="false"
+        android:icon="@drawable/ic_baseline_favorite_border_24"
+        android:title="NEI"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/filterButton"
+        android:icon="@drawable/ic_baseline_sort_24"
+        android:title="Filtrer"
+        app:showAsAction="always" />
+</menu>

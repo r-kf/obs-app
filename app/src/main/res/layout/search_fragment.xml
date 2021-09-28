@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.views.search.SearchFragment">
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/searchSpinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:nestedScrollingEnabled="false"
+        android:spinnerMode="dialog"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </androidx.fragment.app.FragmentContainerView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:id="@+id/sheet"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@color/white"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_baseline_remove_24" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:fadingEdge="vertical"
+                android:paddingTop="115dp"
+                android:paddingBottom="100dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:fitsSystemWindows="false"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Theme.SearchToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/search_menu"
+        app:titleTextAppearance="@style/Theme.ToolbarTitleText"
+        app:titleTextColor="@color/primaryLightColor">
+
+
+        <ImageButton
+            android:id="@+id/sort_map_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:spinnerMode="dropdown"
+            android:src="@drawable/ic_baseline_sort_24"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="306dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageButton
+            android:id="@+id/favorites_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@+id/searchSpinner"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_favorite_border_24"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="346dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageButton
+            android:id="@+id/favorites_button_full"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@+id/searchSpinner"
+            android:background="#00000000"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_favorite_24"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="386dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <Spinner
+        android:id="@+id/sort_map_spinner"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/google_map" />
+
+    <ProgressBar
+        android:id="@+id/progressBarSearch"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical|fill_vertical|end"
+        android:indeterminate="true"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/google_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/google_map"
+        app:layout_constraintTop_toTopOf="@+id/google_map" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
